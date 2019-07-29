@@ -5,13 +5,17 @@ import { ApplicationProvider } from 'react-native-ui-kitten';
 import { Home } from './src/components/home/home.component';
 import { Navigation } from './src/components/shared/navigation/navigation.component';
 import { ScrollView, StyleSheet } from 'react-native';
+import { I18nextProvider } from 'react-i18next';
+import i18n from './i18n';
 
 const App = () => (
   <ApplicationProvider mapping={mapping} theme={lightTheme}>
-    <ScrollView stickyHeaderIndices={[0]} showsVerticalScrollIndicator={false}>
-      <Navigation title='NY Times' />
-      <Home />
-    </ScrollView>
+    <I18nextProvider i18n={i18n}>
+      <ScrollView stickyHeaderIndices={[0]} showsVerticalScrollIndicator={false}>
+        <Navigation title='NY Times' />
+        <Home />
+      </ScrollView>
+    </I18nextProvider>
   </ApplicationProvider>
 );
 

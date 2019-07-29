@@ -22,6 +22,7 @@ export class Home extends Component<any, any> {
       result.results.forEach(item => articles.push(Article.mapArticleToModel(item)));
       this.setState({ articles });
     } catch (error) {
+      //Fallback to invalid API response
       console.log(error);
     }
   }

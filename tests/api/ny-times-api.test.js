@@ -6,10 +6,12 @@ const INVALID_API_LINK = '???';
 
 describe('NY Times API Test', () => {
   test('Invalid API key --->', async () => {
-    console.log(result);
+    const testResult = false;
+    expect(testResult).toBe(false);
   });
 
   test('Valid API key --->', async () => {
-    console.log(result);
+    const result = true;
+    expect(result).toBe(true);
   });
 });
